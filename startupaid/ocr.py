@@ -24,22 +24,20 @@ def ocr_image(image_path):
     model = "gemini-2.5-pro-exp-03-25"
     
     # Correctly format the image data for Gemini
-    subject = "Linear Algebra"
-
-    prompt = f"""
-You are an expert in extracting students' handwritten answers from exam papers with high accuracy. The subject being evaluated is {subject} so use this context to resolve ambiguities in handwriting.
+    prompt = """
+You are an expert in extracting students' handwritten answers from exam papers with high accuracy. Based on the answer, figure out the subject that the student is being evaluated on, and based on this context, resolve ambiguities in handwriting. If you have any confusions about what the student has written, figure it out from the context of the given text.
 
 Extract all handwritten answers along with their corresponding question numbers. Ignore any printed text, instructions, or irrelevant content. Ignore strikethrough text as well. DO NOT modify ANY of the student's answers even if they are wrong and DO NOT hallucinate anything about what the user has written, just extract them as they are. Represent the extracted data as a list of JSON objects in the following format:
 
 [
-  {{
+  {
     "question_number": 5,
     "answer": "Student's handwritten answer here, preserving formatting using markdown. Any mathematical expressions should be accurately represented in the markdown as well."
-  }},
-  {{
+  },
+  {
     "question_number": 6,
     "answer": "Next student's answer..."
-  }}
+  }
 ]
 
 In case the question number for a given question is not specified, write "Contd" there, implying that it's a continuation of the answer on the previous page. Note that the question number can also be like 1a and stuff like that (not always an integer). However, dont include dots or brackets in the question number (just alphanumeric characters). 
