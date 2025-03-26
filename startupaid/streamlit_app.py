@@ -47,8 +47,8 @@ def merge_ocr_results(all_results):
 
 def ocr_page():
     """First page: PDF OCR Processing"""
-    st.title("PDF OCR Processing App")
-    st.write("Upload a PDF to extract handwritten text")
+    st.title("T-AI: AI powered grading")
+    st.write("Upload a PDF of your answer sheet to extract handwritten text")
     
     # Initialize OCR results in session state if needed
     if "all_ocr_results" not in st.session_state:
