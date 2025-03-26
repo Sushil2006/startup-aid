@@ -42,7 +42,7 @@ Extract all handwritten answers along with their corresponding question numbers.
   }
 ]
 
-In case the question number for a given question is not specified, write "Contd" there, implying that it's a continuation of the answer on the previous page. Note that the question number can also be like 1a and stuff like that (not always an integer). 
+In case the question number for a given question is not specified, write "Contd" there, implying that it's a continuation of the answer on the previous page. Note that the question number can also be like 1a and stuff like that (not always an integer). However, dont include dots or brackets in the question number (just alphanumeric characters). 
 Ensure precise segmentation of answers and their correct association with question numbers. If any text is unclear, infer the most likely content based on subject knowledge while preserving the original intent.
 
 """
