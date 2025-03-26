@@ -49,6 +49,7 @@ Your task:
   "explanation": "The student correctly explained the key concept but missed an important step outlined in the grading scheme."
 }
 
+Any text in the explanation should be written in markdown, enclose any math in $...$ so that it's formatted properly.
 Make sure your grading is **fair, consistent, and well-justified** based on the provided inputs. **Do not assume information beyond what is given unless necessary**.
 
 Here is the answer data to grade:
